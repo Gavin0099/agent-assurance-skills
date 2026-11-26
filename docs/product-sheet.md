@@ -13,7 +13,7 @@ AI Agent Assurance gives maintainers and QA engineers two reusable review workfl
 | AI PR Evidence Review | Ticket, candidate diff, revisions, available CI and test results | Read-only review of scope, regression risk, test assertions, and current-head verification |
 | Agent Acceptance Test | Behavior specification, case observations, and any authorized test interface | Case-level PASS, FAIL, BLOCKED, and NOT_RUN decisions with their evidence |
 
-The package contains instructions, references, and report templates, licensed under Apache 2.0. The workflows use the evidence and tools you make available. A plan or completion message alone does not substantiate execution. Agent testing requires authorization for any action it performs.
+The package contains instructions, references, and report templates, licensed under Apache 2.0. The workflows use the evidence and tools you make available. The read-only review instructions rely on host permissions and sandbox settings for enforcement. A plan or completion message alone does not substantiate execution. Agent testing requires authorization for any action it performs.
 
 ## 繁體中文
 
@@ -24,7 +24,7 @@ AI Agent Assurance 提供兩套可重複使用的審查流程，適合維護者�
 - **AI PR Evidence Review** 依需求、候選變更及可取得的測試資料進行唯讀審查，標示回歸風險並核對 CI 是否對應當前提交。
 - **Agent Acceptance Test** 依規格與觀察紀錄逐案判定 PASS、FAIL、BLOCKED 或 NOT_RUN。若需執行測試，必須明確授權測試介面與容許的操作影響。
 
-套件內含工作指引、參考資料與報告範本，採 Apache 2.0 授權。工作流程使用你提供的證據與可用工具。要證明操作完成，仍需可查驗的結果。
+套件內含工作指引、參考資料與報告範本，採 Apache 2.0 授權。工作流程使用你提供的證據與可用工具。唯讀規則由工作指引提出，實際隔離由執行環境的權限和沙箱設定提供。要證明操作完成，仍需可查驗的結果。
 
 [Installation and platform status](distribution-packaging.md) · [Evaluation setup](../tests/evaluations/README.md) · [Sample report](../examples/sample-review-report.md)
 
@@ -46,4 +46,4 @@ Compare with the [expected decisions](../tests/evaluations/cases.md#grading-rubr
 
 ## Observed evidence
 
-In the [initial Codex trial](../tests/evaluations/initial-results.md), baseline met 4 of 8 fixed rubric cases and the skill arm met 8 of 8. The implementation agent scored this one trial across two synthetic repositories. Both arms detected the seeded threshold change and duplicate write. The skill arm used more tokens and time in both tasks. These observations cover the tested fixtures and leave customer outcomes, cross-platform effectiveness, and overall review accuracy open. The original trial recorded a Claude Code OAuth blocker.
+Independent scoring on two synthetic repositories reproduced the original Codex scores of 4/8 baseline and 8/8 with the skills. Both Codex arms detected the seeded threshold change and duplicate write. The Codex skill arm used more tokens and time in both tasks. After the initial Claude authentication blocker cleared, Claude Code scored 3/8 baseline and 5/8 with the skills. Three requirements remained unmet in both Claude arms. These trials loaded the standalone skills. Native Codex and Claude plugin installation was checked separately. Customer outcomes, general review accuracy and reviewer savings remain unmeasured. [Evaluation records](../tests/evaluations/README.md)

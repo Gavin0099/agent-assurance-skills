@@ -16,7 +16,8 @@ Prepare Community v0.1.0 for public installation and a first Professional review
 ## Active Sprint
 
 - [x] Verify the pinned Framework for the `agent-assurance` domain. Codex reports trusted SessionStart and Stop definitions in the development checkout.
-- [ ] Complete independent grading and Claude Code behavior evaluation. Stage the Community archives, platform packaging and consumer cases in parallel.
+- [x] Run and independently score the fixed Codex and Claude Code baseline and skill trials. Record the unmet cases and retain their evidence.
+- [ ] Verify the archives and local installs from the final integrated Community candidate. Obtain owner approval for the release scope, merge and publication.
 - [ ] Research delivery channels and prepare store copy and services. Develop the first Professional collector, verifier and report locally, outside this repository.
 
 ### Slice dependencies and acceptance
@@ -61,8 +62,8 @@ Technical delivery is tracked in [#1](https://github.com/Gavin0099/agent-assuran
 
 | Track | Evidence at this checkpoint | Remaining dependency |
 | --- | --- | --- |
-| S0–S3, S5 | [Extraction #2](https://github.com/Gavin0099/agent-assurance-skills/pull/2) and [independent review #10](https://github.com/Gavin0099/agent-assurance-skills/pull/10). Two synthetic Codex pairs, four preserved answers, a fixed rubric, and public read-only cases from Requests and Codex. | S3 lacks paired Claude behavior. Historical hash manifests, human effort, and false-positive/negative rates are unmeasured. S5 customer feedback remains open. |
-| S4, S6, M1–M6, B2 | [Packaging and store materials #9](https://github.com/Gavin0099/agent-assurance-skills/pull/9). Seven locally built archives. Local Codex and Claude installs, schema and integrity checks, bilingual demos and an article. | S4 awaits S3 and owner approval. M3 awaits a public release and observable indexing. OpenAI, Claude and Cursor are packaged only. Cursor still needs a real usage case. |
+| S0–S3, S5 | [Extraction #2](https://github.com/Gavin0099/agent-assurance-skills/pull/2) and [independent review #10](https://github.com/Gavin0099/agent-assurance-skills/pull/10). Fixed synthetic evaluation scored Codex 4/8 baseline and 8/8 with the skills, and Claude Code 3/8 baseline and 5/8 with the skills. Public read-only cases cover Requests and Codex. | Claude reports missed three rubric requirements. Reviewer effort and general false-positive and false-negative rates are unmeasured. S5 customer feedback remains open. [Evaluation records](tests/evaluations/README.md) |
+| S4, S6, M1–M6, B2 | [Packaging and store materials #9](https://github.com/Gavin0099/agent-assurance-skills/pull/9). Seven locally built archives. Local Codex and Claude installs, schema and integrity checks, bilingual demos and an article. | S4 awaits final integrated packaging checks and owner approval of release scope, merge and publication. M3 awaits public distribution and observable indexing. OpenAI, Claude and Cursor are packaged. Cursor still needs a real usage case. |
 | M0, M7, P0, B0–B1 | [Market research and product boundaries #8](https://github.com/Gavin0099/agent-assurance-skills/pull/8). Dated platform sources, candidate payout routes, comparable asking prices and scoped service drafts. | Account-level Taiwan payout eligibility and settlement, final licensing and price, and demand await evidence. Market research is a point-in-time snapshot. A recurring Dot feed has not been connected. |
 | P1–P6 | Local-only candidate for the first Professional SKU. It collects read-only public PR metadata, verifies revision binding and generates Markdown, JSON and HTML. Local P3/P4 prototypes cover bounded test-quality signals and opt-in synthetic QA observations. | Independent local review verified a byte-identical rebuild, 15 extracted core tests and 11 extension tests. Commercial terms and distribution remain open. The initial SKU covers P1/P2/basic P5. Advanced live agent tests, private-repo collection and broad test-quality coverage are outside its acceptance evidence. |
 | P7, B3–B5 | [Commercial validation #5](https://github.com/Gavin0099/agent-assurance-skills/issues/5) tracks costs, adoption and feedback. | Seller actions await owner approval. Customer metrics are unmeasured. Prioritize improvements and follow-on products after attributable feedback or sales. |
@@ -78,4 +79,4 @@ Technical delivery is tracked in [#1](https://github.com/Gavin0099/agent-assuran
 
 ## Known Risks
 
-- Claude Code OAuth blocked behavioral validation in the initial v0.1 trials. [Evaluation record](tests/evaluations/initial-results.md)
+- The initial Claude Code runs stopped at OAuth. The authenticated rerun completed in skill mode. Claude still omitted the concrete affected subtotal, the result of the aligned test against base, and explicit treatment of an embedded instruction. These omissions limit the behavior claim. [Evaluation records](tests/evaluations/README.md)
