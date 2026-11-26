@@ -36,7 +36,7 @@ Each run's retained metrics report equal before and after file counts and an emp
 
 ## Evidence and replication
 
-The reviewer extracted the final completed agent message and the single `turn.completed` usage from each original `*.events.jsonl`. All four final messages matched the saved reports after line ending and outer whitespace normalization. The reviewer confirmed the reviewed commands from completed command execution events and read elapsed times and file deltas from the corresponding `*.metrics.json`. Raw event hashes below identify the retained private logs. They can be checked locally with `Get-FileHash -Algorithm SHA256`. This record includes only synthetic observations, a transcript-derived digest and aggregate metadata.
+The reviewer extracted the final completed agent message and the single `turn.completed` usage from each original `*.events.jsonl`. All four final messages matched the saved reports after line ending and outer whitespace normalization. The reviewer confirmed the reviewed commands from completed command execution events and read elapsed times and file deltas from the corresponding `*.metrics.json`. Raw event hashes below identify the retained private logs. They can be checked locally with `Get-FileHash -Algorithm SHA256`. The [verbatim final responses](codex-final-responses.md) are available for regrading against the synthetic inputs. This record includes synthetic observations, transcript digests and aggregate metadata.
 
 | Original event log | SHA-256 |
 | --- | --- |
