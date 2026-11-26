@@ -1,0 +1,1 @@
+Checked both v0.1 skill entrypoints and their relative resource links
