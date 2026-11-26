@@ -4,7 +4,7 @@ I wanted to know whether review instructions change what an AI finds once it has
 
 ## What I compared
 
-I used ten public PRs from packaging, Click and attrs, with 17 required review points written down before scoring. Those points included scope, test quality, clean changes and missing evidence. Four cases used historical intermediate revisions. The three arms used the same Claude Code model and fixed offline evidence. The baseline received the task and evidence. Community added the published review instructions, reference and template. Community plus Pro also received a locally generated report from the same snapshot. The model had no tools in these runs. An independent AI grader scored shuffled reports without the arm labels. Report style could still hint at the arm. [Pinned Community review instructions](https://github.com/Gavin0099/agent-assurance-skills/tree/bd53617b579dee09eb09781f1bffdc083540a100/skills/ai-pr-evidence-review)
+I used ten public PRs from packaging, Click and attrs, with 17 required review points written down before scoring. Those points included scope, test quality, clean changes and missing evidence. Four cases used historical intermediate revisions. The three arms used Claude Code 2.1.220 with Sonnet 5 (`claude-sonnet-5`) and fixed offline evidence. The baseline received the task and evidence. Community added the published review instructions, reference and template. Community plus Pro also received a locally generated report from the same snapshot. The model had no tools in these runs. An independent AI grader scored shuffled reports without the arm labels. Report style could still hint at the arm. [Pinned Community review instructions](https://github.com/Gavin0099/agent-assurance-skills/tree/bd53617b579dee09eb09781f1bffdc083540a100/skills/ai-pr-evidence-review)
 
 | Ten primary PRs | Baseline | Community | Community + Pro |
 | --- | ---: | ---: | ---: |
@@ -14,7 +14,27 @@ I used ten public PRs from packaging, Click and attrs, with 17 required review p
 | Unsupported statements | 0 | 2 | 0 |
 | Statements contradicted by evidence | 0 | 5 | 2 |
 
-These are original aggregate scores for this comparison. Compared with Community, the Pro arm did better on three PRs, worse on one and tied on six. Agreed aggregate scores do not mean reviewers made the same mistakes.
+These are original aggregate scores for this comparison. Compared with Community, the Pro arm did better on three PRs, worse on one and tied on six. The aggregate score can hide different mistakes.
+
+<details>
+<summary>Scores and reviewed revisions for all ten PRs</summary>
+
+| Public PR | Reviewed revision | Baseline | Community | Community + Pro |
+| --- | --- | ---: | ---: | ---: |
+| [packaging #1093](https://github.com/pypa/packaging/pull/1093) | [2fa545e](https://github.com/pypa/packaging/commit/2fa545e44739a33b06f28bdd46d1d512a94b2703) (intermediate) | 1/1 | 1/1 | 1/1 |
+| [packaging #1097](https://github.com/pypa/packaging/pull/1097) | [f31d105](https://github.com/pypa/packaging/commit/f31d1050d6b8245cb4b7f7b61866948307fb5a95) (intermediate) | 1/2 | 0/2 | 2/2 |
+| [packaging #1160](https://github.com/pypa/packaging/pull/1160) | [a7394c9](https://github.com/pypa/packaging/commit/a7394c9d9482e8abcdbd2f1eccfc781afac76797) | 1/2 | 1/2 | 2/2 |
+| [packaging #1121](https://github.com/pypa/packaging/pull/1121) | [c147406](https://github.com/pypa/packaging/commit/c147406bd742d25d0fb33a6a885625edf422d0e6) | 1/1 | 1/1 | 1/1 |
+| [packaging #1166](https://github.com/pypa/packaging/pull/1166) | [e32bfca](https://github.com/pypa/packaging/commit/e32bfca8ea512c5343be701c47ed8455e6798711) (intermediate) | 2/2 | 2/2 | 2/2 |
+| [Click #2972](https://github.com/pallets/click/pull/2972) | [d1f8651](https://github.com/pallets/click/commit/d1f865142812584b9a1630106cce3f2309751e71) | 2/2 | 2/2 | 2/2 |
+| [Click #3507](https://github.com/pallets/click/pull/3507) | [665736b](https://github.com/pallets/click/commit/665736bc85a19a7a2357c071394b4a545617faa3) | 2/2 | 2/2 | 2/2 |
+| [Click #3509](https://github.com/pallets/click/pull/3509) | [82f377c](https://github.com/pallets/click/commit/82f377c547e1867d073f02bb8f476214d07e245b) | 1/1 | 1/1 | 1/1 |
+| [attrs #1652](https://github.com/python-attrs/attrs/pull/1652) | [2cf7df2](https://github.com/python-attrs/attrs/commit/2cf7df2e50e8d21521ac00bfe74a1e0bdc900934) (intermediate) | 1/2 | 1/2 | 2/2 |
+| [attrs #1663](https://github.com/python-attrs/attrs/pull/1663) | [225715e](https://github.com/python-attrs/attrs/commit/225715ee60870e21b28f4c35de6031cd85eab390) | 1/2 | 2/2 | 1/2 |
+
+</details>
+
+Mean input tokens per PR, including cache creation and reads, were 4,560 for baseline, 6,842 for Community and 7,903 for Community plus Pro. Mean model CLI elapsed times were 15.90, 20.72 and 18.94 seconds respectively. Pro also ran a local verifier for 0.20 seconds per PR on average. These are machine durations. Human review and correction minutes were unmeasured.
 
 ## Reproduce the regression one arm found
 
