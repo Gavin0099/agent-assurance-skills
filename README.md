@@ -31,6 +31,10 @@ See [an example PR report](examples/sample-review-report.md), the [extraction an
 
 In two synthetic repositories, the fixed rubric yielded Codex scores of 4/8 baseline and 8/8 with the skills, and Claude Code scores of 3/8 baseline and 5/8 with the skills. These trials exercised installed standalone skills in fresh sessions. Native plugin installs were checked separately. The scores describe traceability, analysis and evidence classification in these fixtures. [Evaluation records](tests/evaluations/README.md)
 
+## Engineering field notes
+
+Read the [engineering field notes](docs/field-notes/README.md) for reproducible examples of weak assertions, AI review comparisons, and CI revision binding.
+
 ## License
 
 [Apache 2.0](LICENSE)
