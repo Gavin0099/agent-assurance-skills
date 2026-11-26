@@ -1,0 +1,17 @@
+{
+  "name": "agent-assurance",
+  "version": "0.1.0",
+  "description": "Review AI-generated changes and test agent behavior using reproducible evidence.",
+  "author": {
+    "name": "Gavin0099"
+  },
+  "repository": "https://github.com/Gavin0099/agent-assurance-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "code review",
+    "pull request",
+    "CI evidence",
+    "agent testing"
+  ],
+  "displayName": "AI Agent Assurance"
+}
