@@ -1,0 +1,60 @@
+name: Governance Drift
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".governance/**"
+      - ".governance-payload-config.yaml"
+      - ".github/workflows/governance-drift.yml"
+      - ".gitmodules"
+      - "additional/ai-governance-framework"
+      - "AGENTS.base.md"
+      - "AGENTS.md"
+      - "PLAN.md"
+      - "contract.yaml"
+      - "governance/**"
+      - "skills/**"
+      - "validators/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - ".governance/**"
+      - ".governance-payload-config.yaml"
+      - ".github/workflows/governance-drift.yml"
+      - ".gitmodules"
+      - "additional/ai-governance-framework"
+      - "AGENTS.base.md"
+      - "AGENTS.md"
+      - "PLAN.md"
+      - "contract.yaml"
+      - "governance/**"
+      - "skills/**"
+      - "validators/**"
+  workflow_dispatch:
+
+jobs:
+  governance-drift:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install validator dependencies
+        run: python -m pip install "pyyaml>=6.0"
+
+      - name: Run governance drift and skill package checks
+        env:
+          PYTHONPATH: additional/ai-governance-framework
+        run: |
+          python additional/ai-governance-framework/governance_tools/governance_drift_checker.py \
+            --repo . \
+            --framework-root additional/ai-governance-framework \
+            --format human
+          python validators/skill_packages.py
