@@ -2,7 +2,7 @@
 
 These fixtures model an AI-written code change and an agent acceptance request. Both project repositories contain only synthetic material and use ordinary Git without Framework configuration. The [task prompts and grading rubric](cases.md) define five positive and three negative scenarios.
 
-See the [initial S3 results](initial-results.md) for the observed installation, behavior, and cost measurements.
+See the [initial S3 results](initial-results.md) for the installation and trial observations and the [independent review](independent-review.md) for the rescored Codex cases, resource measurements, and evidence limits.
 
 ## Prepare the inputs
 

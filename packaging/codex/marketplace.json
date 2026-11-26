@@ -1,0 +1,12 @@
+{
+  "name": "agent-assurance-local",
+  "interface": {"displayName": "AI Agent Assurance (Local)"},
+  "plugins": [
+    {
+      "name": "agent-assurance",
+      "source": {"source": "local", "path": "./agent-assurance"},
+      "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+      "category": "Developer Tools"
+    }
+  ]
+}
