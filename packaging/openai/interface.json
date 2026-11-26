@@ -1,0 +1,14 @@
+{
+  "displayName": "AI Agent Assurance",
+  "shortDescription": "Verify evidence and behavior",
+  "longDescription": "Review pull request scope, code risk, test quality, and CI evidence for the candidate commit. Evaluate agent behavior using supplied traces or a separately authorized test interface. Findings cite available evidence and flag gaps. The package requires no MCP server or account credentials of its own.",
+  "developerName": "Gavin0099",
+  "category": "Developer Tools",
+  "capabilities": [],
+  "logo": "./assets/icon.svg",
+  "composerIcon": "./assets/icon.svg",
+  "defaultPrompt": [
+    "Review my PR against the ticket and check whether CI ran on the current head.",
+    "Evaluate my agent against this specification and supplied traces."
+  ]
+}
