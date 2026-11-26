@@ -19,7 +19,7 @@ Prepare Community v0.1.0 for public installation and a first Professional review
 - [ ] Complete independent grading and Claude Code behavior evaluation. Stage the Community archives, platform packaging and consumer cases in parallel.
 - [ ] Research delivery channels and prepare store copy and services. Develop the first Professional collector, verifier and report locally, outside this repository.
 
-## Slice dependencies and acceptance
+### Slice dependencies and acceptance
 
 Each row names the next independently verifiable outcome. A draft, a submitted application, an approved listing and a publicly installable release are distinct states.
 
@@ -56,6 +56,16 @@ Each row names the next independently verifiable outcome. A draft, a submitted a
 | B5 | B3 and B4 | Select a follow-on only when real usage or purchase evidence supports it. |
 
 Technical delivery is tracked in [#1](https://github.com/Gavin0099/agent-assurance-skills/issues/1), distribution in [#3](https://github.com/Gavin0099/agent-assurance-skills/issues/3), Professional scope in [#4](https://github.com/Gavin0099/agent-assurance-skills/issues/4) and commercial validation in [#5](https://github.com/Gavin0099/agent-assurance-skills/issues/5).
+
+### Delivery snapshot for November 26
+
+| Track | Evidence at this checkpoint | Remaining dependency |
+| --- | --- | --- |
+| S0–S3, S5 | [Extraction #2](https://github.com/Gavin0099/agent-assurance-skills/pull/2) and [independent review #10](https://github.com/Gavin0099/agent-assurance-skills/pull/10). Two synthetic Codex pairs, four preserved answers, a fixed rubric, and public read-only cases from Requests and Codex. | S3 lacks paired Claude behavior. Historical hash manifests, human effort, and false-positive/negative rates are unmeasured. S5 customer feedback remains open. |
+| S4, S6, M1–M6, B2 | [Packaging and store materials #9](https://github.com/Gavin0099/agent-assurance-skills/pull/9). Seven locally built archives. Local Codex and Claude installs, schema and integrity checks, bilingual demos and an article. | S4 awaits S3 and owner approval. M3 awaits a public release and observable indexing. OpenAI, Claude and Cursor are packaged only. Cursor still needs a real usage case. |
+| M0, M7, P0, B0–B1 | [Market research and product boundaries #8](https://github.com/Gavin0099/agent-assurance-skills/pull/8). Dated platform sources, candidate payout routes, comparable asking prices and scoped service drafts. | Account-level Taiwan payout eligibility and settlement, final licensing and price, and demand await evidence. Market research is a point-in-time snapshot. A recurring Dot feed has not been connected. |
+| P1–P6 | Local-only candidate for the first Professional SKU. It collects read-only public PR metadata, verifies revision binding and generates Markdown, JSON and HTML. Local P3/P4 prototypes cover bounded test-quality signals and opt-in synthetic QA observations. | Verify the final candidate independently. The initial SKU covers P1/P2/basic P5. Advanced live agent tests, private-repo collection and broad test-quality coverage are outside its acceptance evidence. |
+| P7, B3–B5 | [Commercial validation #5](https://github.com/Gavin0099/agent-assurance-skills/issues/5) tracks costs, adoption and feedback. | Seller actions await owner approval. Customer metrics are unmeasured. Prioritize improvements and follow-on products after attributable feedback or sales. |
 
 ## Backlog
 
