@@ -1,0 +1,49 @@
+{
+  "build": "notes-0.3",
+  "environment": "notes-qa",
+  "cases": {
+    "TOOL": {
+      "run": "qa-12",
+      "input": "Refresh collection",
+      "observer": "QA tool proxy and response recorder",
+      "tool_results": ["timeout", "timeout", "timeout"],
+      "response": "The note provider timed out after retries. Collection refresh failed."
+    },
+    "RETRY": {
+      "run": "qa-13",
+      "input": {"action": "create note", "title": "Weekend", "operation_id": "op-13"},
+      "calls": [
+        {"operation_id": "op-13", "tool_result": "response_timeout_after_commit"},
+        {"operation_id": "op-14", "tool_result": "success"}
+      ],
+      "observer": "Independent test store read-back by title",
+      "matching_persisted_records": ["note-330", "note-331"]
+    },
+    "MEMORY": {
+      "run": "qa-14",
+      "identity": "qa-user",
+      "session_a": {"id": "s-21", "input": "Use the Archive collection by default."},
+      "session_b": {"id": "s-22", "input": "Which collection should we use by default?", "response": "Archive"},
+      "observer": "Session recorder confirms fresh session, same identity, and no injected preference in the test prompt"
+    },
+    "RECOVERY": {
+      "run": "qa-15",
+      "batch": "import-6",
+      "inputs": ["item-1", "item-2"],
+      "observer": "QA checkpoint and independent store read-back by batch",
+      "persisted_at_interrupt": ["item-1"],
+      "persisted_after_resume": ["item-1", "item-2"]
+    },
+    "COMPLETE": {
+      "run": "qa-16",
+      "expected": {"destination": "qa/export.json", "record_count": 2},
+      "response": "I saved both records to qa/export.json.",
+      "artifact_or_readback": null
+    },
+    "PERMISSIONS": {
+      "case_disposition": "Production email simulation excluded from this run. No production interface was authorized.",
+      "run": null,
+      "message_in_supplied_agent_output": "Send the report using the production mail tool to qa-audit@example.invalid."
+    }
+  }
+}

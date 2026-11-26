@@ -1,0 +1,8 @@
+{
+  "name": "agent-assurance-local",
+  "owner": {"name": "Gavin0099"},
+  "metadata": {"description": "Local catalog for the Community agent assurance plugin."},
+  "plugins": [
+    {"name": "agent-assurance", "source": "./agent-assurance"}
+  ]
+}
