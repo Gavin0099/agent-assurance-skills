@@ -1,0 +1,47 @@
+1
+00:00:00,000 --> 00:00:06,000
+A green CI check answers a narrow question.
+
+2
+00:00:06,000 --> 00:00:12,000
+Before merging, ask what it tested and which revision it belongs to.
+
+3
+00:00:12,000 --> 00:00:18,000
+The Community example reviews a delivery change against two requirements.
+
+4
+00:00:18,000 --> 00:00:24,000
+The thirty-minute assertion passes on both versions. It misses the threshold regression.
+
+5
+00:00:24,000 --> 00:00:30,000
+The example keeps the successful H1 receipt attached to H1.
+
+6
+00:00:30,000 --> 00:00:36,000
+The branch moved to H2, so current-head verification stays blocked.
+
+7
+00:00:36,000 --> 00:00:42,000
+Now run Pro against the synthetic snapshot shipped with the buyer ZIP.
+
+8
+00:00:42,000 --> 00:00:48,000
+This command reads the fixture and writes a JSON evidence report locally.
+
+9
+00:00:48,000 --> 00:00:54,000
+The generated report binds one successful check and flags the stale one.
+
+10
+00:00:54,000 --> 00:01:00,000
+A reported pass without a test receipt stays unknown.
+
+11
+00:01:00,000 --> 00:01:06,000
+The Community release is free on GitHub. Pro is a separate Gumroad download.
+
+12
+00:01:06,000 --> 00:01:12,000
+Use the report to check evidence. Review behavior and merge decisions separately.
